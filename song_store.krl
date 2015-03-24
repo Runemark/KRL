@@ -1,9 +1,9 @@
 
 ruleset server_stuff {
   meta {
-    name "See Songs Found"
+    name “Song Store“
     description <<
-Server Ruleset
+Song Store
 >>
     author "Martin Mumford"
     logging on
