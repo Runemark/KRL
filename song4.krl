@@ -26,7 +26,7 @@ Server Ruleset
   }
 
   rule sung is active {
-    select when explicit sung song re#(.*)god(.*)# setting(m)
+    select when explicit sung song re#(.*)god(.*)#i setting(m)
     send_directive("sung") with
       song = m
     always {
