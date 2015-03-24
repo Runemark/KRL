@@ -9,6 +9,8 @@ Server Ruleset
     logging on
     sharing on
     provides songs
+    provides hymns
+    provides secular_music
   }
 
   global {
