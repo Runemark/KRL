@@ -29,7 +29,7 @@ Server Ruleset
     select when echo message msg_type re#song# setting(m)
     send_directive("sing") with
       song = m;
-    fired {
+    always {
       raise explicit event sung with
         song = m;
     }
