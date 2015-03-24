@@ -21,8 +21,8 @@ Server Ruleset
 
   rule found_hymn is active {
     select when explicit found_hymn song "(.*)" setting(m)
-      select_directive("found hymn") with
-        hymn = m;
+    send_directive("found hymn") with
+      hymn = m;
   }
 
   rule sung is active {
