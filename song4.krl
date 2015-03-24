@@ -36,12 +36,12 @@ Server Ruleset
   }
 
   rule songs is active {
-    select when echo message msg_type re#song# setting(m)
+    select when echo message msg_type re#song# msg_body "(.*)" setting(n)
     send_directive("sing") with
-      song = m;
+      song = n;
     always {
       raise explicit event sung with
-        song = m;
+        song = n;
     }
   }
 }
