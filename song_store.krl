@@ -8,6 +8,26 @@ Server Ruleset
     author "Martin Mumford"
     logging on
     sharing on
+    provides songs
+  }
+
+  global {
+    songs = function(obj) {
+      songlist = ent:sung_songs || [];
+      songlist
+    };
+
+    hymns = function(obj) {
+      hymnlist = ent:sung_hymns || [];
+      hymnlist
+    };
+
+    secular_music = function(obj) {
+      hymnlist = ent:sung_hymns || [];
+      songlist = ent:sung_songs || [];
+      secularlist = songlist.difference(hymnlist);
+      secularlist
+    };
   }
 
   rule collect_songs {
