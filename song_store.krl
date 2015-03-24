@@ -1,7 +1,7 @@
 
 ruleset server_stuff {
   meta {
-    name “Song Store“
+    name "Song Store"
     description <<
 Song Store
 >>
