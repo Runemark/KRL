@@ -27,7 +27,7 @@ Server Ruleset
 
   rule sung is active {
     select when explicit sung song re#(.*)god(.*)# setting(m)
-    send_directive("sung") with
+    send_directive("sungv") with
       song = m
     always {
       raise explicit event found_hymn with
@@ -37,7 +37,7 @@ Server Ruleset
 
   rule songs is active {
     select when echo message msg_type re#song# msg_body "(.*)" setting(n)
-    send_directive("sing") with
+    send_directive("singv") with
       song = n;
     always {
       raise explicit event sung with
