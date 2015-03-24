@@ -20,7 +20,7 @@ Server Ruleset
   }
 
   rule sung is active {
-    select when sung song "(.*)" setting(m)
+    select when explicit sung song "(.*)" setting(m)
     send_directive("sung") with
       song = m;
   }
